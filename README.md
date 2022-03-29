@@ -1,6 +1,8 @@
 # first journey with react
 
-This project is a assignment for me from programing hero community
+This project is a practice project for me in react
+
+bangla definition: "halka halka kora react sikhi and aikhane apply kori"
 
 ## live site link here
 
