@@ -1,0 +1,44 @@
+.image {
+  overflow: hidden;
+}
+.zoom-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+.zoom-img:hover {
+  transform: scale(1.2);
+}
+.card-container {
+  width: 300px;
+  height: 508px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(246, 243, 243);
+  position: relative;
+  overflow: hidden;
+}
+.price{
+  margin-top: -20px;
+}
+.add-btn {
+  color: aliceblue;
+  text-align: center;
+  padding: 8px;
+  margin-top: 20px;
+  background-color: rgba(255, 68, 0, 0.76);
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.add-btn:hover {
+  background-color: rgb(219, 69, 15);
+}
+.tk {
+  font-size: 20px;
+  font-weight: bold;
+}

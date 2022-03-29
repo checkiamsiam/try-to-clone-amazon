@@ -1,0 +1,51 @@
+.header{
+  height: 70px;
+  background-color: #1C2B35;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  align-items: center;
+}
+.title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 100px;
+  /* background-image: url(../../images/Logo.svg); */
+}
+.nav{
+  margin-left: 200px;
+}
+nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+nav a:hover{
+  color: rgb(243, 214, 214);
+}
+
+@media only screen and (max-width: 700px) {
+  .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  .nav{
+    margin-left: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+  .nav{
+    margin-left: 0px;
+  }
+  nav a {
+    margin-right: 8px;
+  }
+}

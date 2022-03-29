@@ -1,0 +1,37 @@
+.banner-img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: -10px 10px rgba(255, 68, 0, 0.555);
+}
+.banner-container {
+  font-family: "Lato";
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.right-photo {
+  width: 20%;
+  margin-left: 22%;
+}
+.sale {
+  color: #ff9900;
+  margin-bottom: 3em;
+}
+.shop-btn {
+  margin-top: 25px;
+  padding: 8px 20px;
+  background-color: rgba(255, 68, 0, 0.555);
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 700px){
+  .banner-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
