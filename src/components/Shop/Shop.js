@@ -5,18 +5,22 @@ import './Shop.css';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const [chosenItem, setChosenItem] = useState([]);
   useEffect(() => {
     fetch('fake-data.json')
       .then(res => res.json())
       .then(data => setProducts(data))
-  }, []);
+  }, [chosenItem]);
 
 
-  const [chosenItem, setChosenItem] = useState([]);
+ 
   const handleEvent = (item) => {
     // if (chosenItem.indexOf(item) !== -1) {
     //   return;
     // } else {
+      const objectChosen = {chosenItem};
+      const chosenStringify = JSON.stringify(objectChosen);
+      sessionStorage.setItem('selected' , chosenStringify)
       setChosenItem([...chosenItem, item]);
     // }
   }

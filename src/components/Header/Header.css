@@ -15,14 +15,14 @@
 .nav{
   margin-left: 200px;
 }
-nav a {
+.nav-link{
   text-decoration: none;
   color: whitesmoke;
   margin-right: 20px;
   cursor: pointer;
   transition: .5s;
 }
-nav a:hover{
+.nav-link:hover{
   color: rgb(243, 214, 214);
 }
 
@@ -45,7 +45,7 @@ nav a:hover{
   .nav{
     margin-left: 0px;
   }
-  nav a {
+  .nav-link{
     margin-right: 8px;
   }
 }

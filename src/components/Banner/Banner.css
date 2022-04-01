@@ -29,6 +29,11 @@
   font-size: 18px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+.shop-btn-link{
+  text-decoration: none;
+  color: rgb(46, 43, 36);
 }
 @media only screen and (max-width: 700px){
   .banner-container {
