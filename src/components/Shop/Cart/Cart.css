@@ -8,7 +8,7 @@
 }
 .cart-full-component{
   position: sticky;
-  top: 0;
+  top: 50px;
 }
 .btn-success{
   background-color: rgb(224, 219, 219);

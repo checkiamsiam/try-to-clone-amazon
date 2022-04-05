@@ -1,10 +1,14 @@
 .header{
-  height: 70px;
+  height: fit-content;
   background-color: #1C2B35;
   color: whitesmoke;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .title{
   font-size: 24px;
@@ -25,17 +29,36 @@
 .nav-link:hover{
   color: rgb(243, 214, 214);
 }
-
+.ham-berger{
+  font-size: 1.5rem;
+  display: none;
+}
 @media only screen and (max-width: 700px) {
+  .ham-berger{
+    display: block;
+    text-align: right;
+    margin: 1rem;
+  }
+  nav{
+    display: none;
+  }
   .title{
     font-size: 20px;
     font-weight: bold;
     margin-left: 20px;
   }
-  .nav{
-    margin-left: 100px;
+  .block{
+    display: block;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+  }
+  .none{
+    display: none;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .title{
     font-size: 18px;
