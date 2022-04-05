@@ -1,0 +1,15 @@
+.order-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 5em;
+}
+.items{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+}
+@media only screen and (max-width: 700px){
+  .order-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

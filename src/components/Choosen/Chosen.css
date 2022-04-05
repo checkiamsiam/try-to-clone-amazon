@@ -1,0 +1,21 @@
+.box{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.data-icon{
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.delete-icon{
+  cursor: pointer;
+  background-color: rgba(255, 68, 0, 0.555);
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 20px;
+}

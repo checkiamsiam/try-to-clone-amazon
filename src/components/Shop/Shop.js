@@ -4,27 +4,31 @@ import Product from './Product/Product';
 import './Shop.css';
 
 const Shop = () => {
+  const addToLocal = dataInObject => localStorage.setItem('selected' , dataInObject);
+
   const [products, setProducts] = useState([]);
   const [chosenItem, setChosenItem] = useState([]);
   useEffect(() => {
     fetch('fake-data.json')
       .then(res => res.json())
       .then(data => setProducts(data))
-  }, [chosenItem]);
+  }, []);
 
-
+  useEffect(()=>{
+    const objectChosen = chosenItem;
+    const chosenStringify = JSON.stringify(objectChosen);
+    addToLocal(chosenStringify);
+   },[chosenItem]);
+   
  
   const handleEvent = (item) => {
     // if (chosenItem.indexOf(item) !== -1) {
     //   return;
     // } else {
-      const objectChosen = {chosenItem};
-      const chosenStringify = JSON.stringify(objectChosen);
-      sessionStorage.setItem('selected' , chosenStringify)
       setChosenItem([...chosenItem, item]);
+    
     // }
   }
-  
   return (
     <div className='shop-container'>
       <div className="product">
