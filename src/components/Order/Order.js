@@ -8,18 +8,25 @@ const Order = () => {
   useEffect(() => {
     const chosenItem = localStorage.getItem('selected');
     setItems(JSON.parse(chosenItem))
-  }, [])
-  const deleteFromStorage = (pera) => {
-    const blankPage = '[]';
-    localStorage.setItem('selected', blankPage);
-  }
+  }, []);
+  
+  const handleDetete = product => {
+    const rest = items.filter(pd => pd.id !== product.id);
+    setItems(rest);
+  };
+
+  const deleteFromStorage = () => {
+    setItems([]);
+  };
   return (
     <div>
       <div className="order-container">
         <div className="items">
-          {items.map(item => <Choosen key={item.id} data={item}></Choosen>)}
+          {items.map(item => <Choosen key={item.id} event={handleDetete} data={item}></Choosen>)}
         </div>
-        <Cart items={items} empty={deleteFromStorage}></Cart>
+        <Cart items={items} empty={deleteFromStorage}>
+          <b>Proceed Checkout</b>
+        </Cart>
       </div>
     </div>
   );

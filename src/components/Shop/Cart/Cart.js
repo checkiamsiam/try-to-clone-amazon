@@ -2,7 +2,8 @@ import './Cart.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight , faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const Cart = ({items , empty}) => {
+const Cart = (props) => {
+  const {items , empty} = props;
   let total = 0;
   let shipping = 0;
  for(const item of items){
@@ -23,7 +24,7 @@ const Cart = ({items , empty}) => {
           <p>Shipping Charge : $ {shipping}</p>
           <p>Tax : $ {tax}</p>
           <h4>Grand Total : $ {grandTotal}</h4>
-          <button className='btn-success'>Preview <FontAwesomeIcon icon={faArrowRight} /></button> <br />
+          <button className='btn-success'>{props.children}<FontAwesomeIcon icon={faArrowRight} /></button> <br />
           <button onClick={()=> empty([])} className='btn-danger'>Clear Cart   <FontAwesomeIcon icon={faTrash} /></button>
         </div>
       </div>
