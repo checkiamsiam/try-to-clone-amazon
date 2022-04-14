@@ -12,6 +12,7 @@
 }
 .btn-success{
   background-color: rgb(224, 219, 219);
+  text-decoration: none;
   color: green;
   width: 100%;
   padding: 5px 10px;
